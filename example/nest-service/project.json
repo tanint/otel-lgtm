@@ -1,0 +1,25 @@
+{
+  "name": "nest-service",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "example/nest-service/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "nest-service:build",
+        "port": 7000
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "nest-service:build:development"
+        },
+        "production": {
+          "buildTarget": "nest-service:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
